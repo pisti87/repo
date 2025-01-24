@@ -19,7 +19,7 @@ jobs:
         uses: ahmadnassri/action-workflow-queue@v1
       - uses: actions/checkout@v3
       - name: Clone ${{ github.event.client_payload.repository }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ github.event.client_payload.repository }}
           submodules: true
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout apt repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: bookworm
           submodules: true
